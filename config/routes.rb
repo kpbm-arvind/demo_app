@@ -1,4 +1,6 @@
 DemoApp::Application.routes.draw do
+  resources :microposts
+
   # this line creates a BUNCH of routes!
   # see table in notes for full details
   resources :users
