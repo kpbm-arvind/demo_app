@@ -2,12 +2,18 @@ class UsersController < ApplicationController
   # GET /users
   # GET /users.xml
   def index
+    # User = data model, .all is a method that retrieves an array
+    # containing all entries in the user table. 
+    # @users is an ivar
+    # this is step 6 in the diagram in your notes!
+    # .all is a method provided by ActiveRecord::Base
     @users = User.all
-
-    respond_to do |format|
-      format.html # index.html.erb
-      format.xml  { render :xml => @users }
-    end
+    
+    # These lines are unnecessary for functionality
+    # respond_to do |format|
+    #   format.html # index.html.erb
+    #   format.xml  { render :xml => @users }
+    # end
   end
 
   # GET /users/1
